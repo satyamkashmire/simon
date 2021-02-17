@@ -14,6 +14,17 @@ $(document).keypress(function () {
 });
 
 
+function playGame() {
+    if (level === 0 && !gameStarted) {
+        computerCall();
+        console.log("this is working");
+        $("h1").text("level 0");
+        level++;
+    }
+}
+
+
+
 function computerCall() {
     var randomNumber = Math.round(Math.random() * 3);
     var randomChosenColour = buttonColours[randomNumber];
